@@ -6,12 +6,14 @@ function upperLeftCornerChildren(grid) {
   const bottomNeighbor = grid[1][0]
   const rightNeighbor = grid[0][1]
 
-  if (bottomNeighbor.value[2] !== '-') {
+  if (upperLeftCorner.value[2] !== '-') {
+    if (bottomNeighbor.value[2] !== '-') {
     upperLeftCorner.children.push(bottomNeighbor)
   }
 
-  if (rightNeighbor.value[2] !== '-') {
-    upperLeftCorner.children.push(rightNeighbor)
+    if (rightNeighbor.value[2] !== '-') {
+      upperLeftCorner.children.push(rightNeighbor)
+    }
   }
 }
 
@@ -21,12 +23,14 @@ function bottomLeftCornerChildren(grid) {
   const topNeighbor = grid[lastRow - 1][0]
   const rightNeighbor = grid[lastRow][1]
 
-  if (topNeighbor.value[2] !== '-') {
-    bottomLeftCorner.children.push(topNeighbor)
-  }
+  if (bottomLeftCorner.value[2] !== '-') {
+    if (topNeighbor.value[2] !== '-') {
+      bottomLeftCorner.children.push(topNeighbor)
+    }
 
-  if (rightNeighbor.value[2] !== '-') {
-    bottomLeftCorner.children.push(rightNeighbor)
+    if (rightNeighbor.value[2] !== '-') {
+      bottomLeftCorner.children.push(rightNeighbor)
+    }
   }
 }
 
@@ -36,12 +40,14 @@ function upperRightCornerChildren(grid) {
   const leftNeighbor = grid[0][lastColumn - 1]
   const bottomNeighbor = grid[1][lastColumn]
 
-  if (leftNeighbor.value[2] !== '-') {
-    upperRightCorner.children.push(leftNeighbor)
-  }
+  if (upperRightCorner.value[2] !== '-') {
+    if (leftNeighbor.value[2] !== '-') {
+      upperRightCorner.children.push(leftNeighbor)
+    }
 
-  if (bottomNeighbor.value[2] !== '-') {
-    upperRightCorner.children.push(bottomNeighbor)
+    if (bottomNeighbor.value[2] !== '-') {
+      upperRightCorner.children.push(bottomNeighbor)
+    }
   }
 }
 
@@ -54,12 +60,14 @@ function bottomRightCornerChildren(grid) {
   const leftNeighbor = grid[lastRow][lastColumn - 1]
   const topNeighbor = grid[lastRow - 1][lastColumn]
 
-  if (leftNeighbor.value[2] !== '-') {
-    bottomRightCorner.children.push(leftNeighbor)
-  }
+  if (bottomRightCorner.value[2] !== '-') {
+    if (leftNeighbor.value[2] !== '-') {
+      bottomRightCorner.children.push(leftNeighbor)
+    }
 
-  if (topNeighbor.value[2] !== '-') {
-    bottomRightCorner.children.push(topNeighbor)
+    if (topNeighbor.value[2] !== '-') {
+      bottomRightCorner.children.push(topNeighbor)
+    }
   }
 }
 
