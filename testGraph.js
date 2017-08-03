@@ -24,6 +24,7 @@ const topRowChildren = require('./topBottomRowsAndLeftRightColumnsChildren').top
 const bottomRowChildren = require('./topBottomRowsAndLeftRightColumnsChildren').bottomRowChildren
 const leftColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren').leftColumnChildren
 const rightColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren').rightColumnChildren
+const middleSquareChildren = require('./middleSquareChildren').middleSquareChildren
 
 // console.log(testGrid.map(row => {
 //   return row.map(cell => cell.value[2])
@@ -47,5 +48,11 @@ rightColumnChildren(testGrid)
 // console.log(B.children), 'A & F')
 // console.log(N.children, 'M & J')
 // console.log(I.children, 'M & J')
-console.log(H.children, 'D, L & G')
-console.log(L.children, 'H & P')
+// console.log(H.children, 'D, L & G')
+// console.log(L.children, 'H & P')
+
+middleSquareChildren(testGrid)
+
+console.log(F.children, ' * * * B, G & J')
+console.log(G.children, ' * * * F & H')
+console.log(J.children, ' * * * F, I & N')
