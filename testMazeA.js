@@ -44,20 +44,20 @@ let vertexList = [
 ]
 
 let gridDimension = Math.sqrt(vertexList.length)
-let testMaze = []
+let testMazeA = []
 for(let i = 0; i < gridDimension; i++) {
-  testMaze.push([])
+  testMazeA.push([])
 }
 
 vertexList.forEach(vertex => {
   let x = vertex.value[0]
   let y = vertex.value[1]
-  testMaze[x][y] = vertex
+  testMazeA[x][y] = vertex
 })
 
 module.exports = {
   Vertex,
-  testMaze,
+  testMazeA,
   A,
   B,
   C,
