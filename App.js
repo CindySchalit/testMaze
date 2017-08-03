@@ -2,24 +2,24 @@ const upperLeftCornerChildren = require('./cornerChildren').upperLeftCornerChild
 const bottomLeftCornerChildren = require('./cornerChildren').bottomLeftCornerChildren
 const upperRightCornerChildren = require('./cornerChildren').upperRightCornerChildren
 const bottomRightCornerChildren = require('./cornerChildren').bottomRightCornerChildren
-const testGrid = require('./testGrid').testGrid
-const Vertex = require('./testGrid').Vertex
-const A = require('./testGrid').A
-const B = require('./testGrid').B
-const C = require('./testGrid').C
-const D = require('./testGrid').D
-const E = require('./testGrid').E
-const F = require('./testGrid').F
-const G = require('./testGrid').G
-const H = require('./testGrid').H
-const I = require('./testGrid').I
-const J = require('./testGrid').J
-const K = require('./testGrid').K
-const L = require('./testGrid').L
-const M = require('./testGrid').M
-const N = require('./testGrid').N
-const O = require('./testGrid').O
-const P = require('./testGrid').P
+const testMaze = require('./testMaze').testMaze
+const Vertex = require('./testMaze').Vertex
+const A = require('./testMaze').A
+const B = require('./testMaze').B
+const C = require('./testMaze').C
+const D = require('./testMaze').D
+const E = require('./testMaze').E
+const F = require('./testMaze').F
+const G = require('./testMaze').G
+const H = require('./testMaze').H
+const I = require('./testMaze').I
+const J = require('./testMaze').J
+const K = require('./testMaze').K
+const L = require('./testMaze').L
+const M = require('./testMaze').M
+const N = require('./testMaze').N
+const O = require('./testMaze').O
+const P = require('./testMaze').P
 const topRowChildren = require('./topBottomRowsAndLeftRightColumnsChildren').topRowChildren
 const bottomRowChildren = require('./topBottomRowsAndLeftRightColumnsChildren').bottomRowChildren
 const leftColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren').leftColumnChildren
@@ -27,24 +27,24 @@ const rightColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren'
 const middleSquareChildren = require('./middleSquareChildren').middleSquareChildren
 const graphBFS = require('./breadthFirstSearch').graphBFS
 
-// console.log(testGrid.map(row => {
+// console.log(testMaze.map(row => {
 //   return row.map(cell => cell.value[2])
 // }))
 
-upperLeftCornerChildren(testGrid)
-bottomLeftCornerChildren(testGrid)
-upperRightCornerChildren(testGrid)
-bottomRightCornerChildren(testGrid)
+upperLeftCornerChildren(testMaze)
+bottomLeftCornerChildren(testMaze)
+upperRightCornerChildren(testMaze)
+bottomRightCornerChildren(testMaze)
 
 // console.log(A.children.map(child => child.value[2]), 'B')
 // console.log(M.children.map(child => child.value[2]), 'I, N')
 // console.log(D.children.map(child => child.value[2]), 'H')
 // console.log(P.children.map(child => child.value[2]), 'L')
 
-topRowChildren(testGrid)
-bottomRowChildren(testGrid)
-leftColumnChildren(testGrid)
-rightColumnChildren(testGrid)
+topRowChildren(testMaze)
+bottomRowChildren(testMaze)
+leftColumnChildren(testMaze)
+rightColumnChildren(testMaze)
 
 // console.log(B.children), 'A & F')
 // console.log(N.children, 'M & J')
@@ -52,12 +52,12 @@ rightColumnChildren(testGrid)
 // console.log(H.children, 'D, L & G')
 // console.log(L.children, 'H & P')
 
-middleSquareChildren(testGrid)
+middleSquareChildren(testMaze)
 
 // console.log(F.children, ' * * * B, G & J')
 // console.log(G.children, ' * * * F & H')
 // console.log(J.children, ' * * * F, I & N')
 
-// console.log(graphBFS(testGrid, M, H), true)
-// console.log(graphBFS(testGrid, A, C), false)
-console.log(graphBFS(testGrid, A, D), true)
+console.log(graphBFS(testMaze, M, H), true)
+console.log(graphBFS(testMaze, A, C), false)
+console.log(graphBFS(testMaze, A, D), true)
