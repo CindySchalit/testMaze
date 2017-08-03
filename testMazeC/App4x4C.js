@@ -27,51 +27,42 @@ const rightColumnChildren = require('../children/topBottomRowsAndLeftRightColumn
 const middleSquareChildren = require('../children/middleSquareChildren').middleSquareChildren
 const graphBFS = require('../breadthFirstSearch').graphBFS
 
-// console.log(testMazeC.map(row => {
-//   return row.map(cell => cell.value[2])
-// }))
+console.log(testMazeC.map(row => {
+  return row.map(cell => cell.value[2])
+}))
 
 upperLeftCornerChildren(testMazeC)
 bottomLeftCornerChildren(testMazeC)
 upperRightCornerChildren(testMazeC)
 bottomRightCornerChildren(testMazeC)
 
-// console.log(A.children.map(child => child.value[2]), 'B')
-// console.log(M.children, '[]')
-// console.log(D.children.map(child => child.value[2]), 'C & H')
-// console.log(L.children, '[]')
-
 topRowChildren(testMazeC)
 bottomRowChildren(testMazeC)
 leftColumnChildren(testMazeC)
 rightColumnChildren(testMazeC)
 
-// /* TOP ROW */
-// console.log(B.children.map(child => child.value[2]), 'A, C & F')
-// console.log(C.children.map(child => child.value[2]), 'B & D')
-
-// /* BOTTOM ROW */
-// console.log(N.children.map(child => child.value[2]), 'O & J')
-// console.log(O.children.map(child => child.value[2]), 'N & P')
-
-// /* LEFT AND RIGHT COLUMNS */
-// console.log(N.children.map(child => child.value[2]), 'O & J')
-// console.log(O.children.map(child => child.value[2]), 'N & P')
-
 middleSquareChildren(testMazeC)
 
-// console.log(F.children.map(child => child.value[2]), 'B & J')
-// console.log(J.children.map(child => child.value[2]), 'F, I & N')
-
-console.log(graphBFS(testMazeC, P, H), true)
+console.log(graphBFS(testMazeC, P, H), false)
 console.log(graphBFS(testMazeC, A, K), false)
-console.log(graphBFS(testMazeC, D, I), true)
-console.log(graphBFS(testMazeC, I, D), true)
+console.log(graphBFS(testMazeC, D, I), false)
+console.log(graphBFS(testMazeC, I, D), false)
 console.log(graphBFS(testMazeC, M, C), false)
 
 /* WALLS */
-// console.log(E.children)
-// console.log(G.children)
-// console.log(K.children)
-// console.log(L.children)
-// console.log(M.children)
+console.log(A.children)
+console.log(B.children)
+console.log(C.children)
+console.log(D.children)
+console.log(E.children)
+console.log(F.children)
+console.log(G.children)
+console.log(H.children)
+console.log(I.children)
+console.log(J.children)
+console.log(K.children)
+console.log(L.children)
+console.log(M.children)
+console.log(N.children)
+console.log(O.children)
+console.log(P.children)
