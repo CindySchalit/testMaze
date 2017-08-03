@@ -7,7 +7,7 @@ function topRowChildren(grid) {
     if (
       index !== 0
       && index !== topRow.length - 1
-      && cell.value[2] !== '-'
+      && !cell.value[2].includes('*')
     ) {
       const row = cell.value[0]
       const column = cell.value[1]
@@ -17,7 +17,7 @@ function topRowChildren(grid) {
       const neighbors = [leftNeighbor, rightNeighbor, bottomNeighbor]
 
       neighbors.forEach(neighbor => {
-        if(neighbor.value[2] !== '-') {
+        if(!neighbor.value[2].includes('*')) {
           cell.children.push(neighbor)
         }
       })
@@ -32,7 +32,7 @@ function bottomRowChildren(grid) {
     if (
       index !== 0
       && index !== bottomRow.length - 1
-      && cell.value[2] !== '-'
+      && !cell.value[2].includes('*')
     ) {
       const row = cell.value[0]
       const column = cell.value[1]
@@ -42,7 +42,7 @@ function bottomRowChildren(grid) {
       const neighbors = [leftNeighbor, rightNeighbor, topNeighbor]
 
       neighbors.forEach(neighbor => {
-        if(neighbor.value[2] !== '-') {
+        if(!neighbor.value[2].includes('*')) {
           cell.children.push(neighbor)
         }
       })
@@ -60,7 +60,7 @@ function leftColumnChildren(grid) {
     if (
       cell.value[0] !== 0
       && cell.value[0] !== leftColumn.length - 1
-      && cell.value[2] !== '-'
+      && !cell.value[2].includes('*')
     ) {
       const row = cell.value[0]
       const column = cell.value[1]
@@ -70,7 +70,7 @@ function leftColumnChildren(grid) {
       const neighbors = [topNeighbor, bottomNeighbor, rightNeighbor]
 
       neighbors.forEach(neighbor => {
-        if(neighbor.value[2] !== '-') {
+        if(!neighbor.value[2].includes('*')) {
           cell.children.push(neighbor)
         }
       })
@@ -88,7 +88,7 @@ function rightColumnChildren(grid) {
     if (
       cell.value[0] !== 0
       && cell.value[0] !== rightColumn.length - 1
-      && cell.value[2] !== '-'
+      && !cell.value[2].includes('*')
     ) {
       const row = cell.value[0]
       const column = cell.value[1]
@@ -98,7 +98,7 @@ function rightColumnChildren(grid) {
       const neighbors = [topNeighbor, bottomNeighbor, leftNeighbor]
 
       neighbors.forEach(neighbor => {
-        if(neighbor.value[2] !== '-') {
+        if(!neighbor.value[2].includes('*')) {
           cell.children.push(neighbor)
         }
       })

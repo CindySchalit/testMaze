@@ -6,12 +6,12 @@ function upperLeftCornerChildren(grid) {
   const bottomNeighbor = grid[1][0]
   const rightNeighbor = grid[0][1]
 
-  if (upperLeftCorner.value[2] !== '-') {
-    if (bottomNeighbor.value[2] !== '-') {
+  if (!upperLeftCorner.value[2].includes('*')) {
+    if (!bottomNeighbor.value[2].includes('*')) {
     upperLeftCorner.children.push(bottomNeighbor)
   }
 
-    if (rightNeighbor.value[2] !== '-') {
+    if (!rightNeighbor.value[2].includes('*')) {
       upperLeftCorner.children.push(rightNeighbor)
     }
   }
@@ -23,12 +23,12 @@ function bottomLeftCornerChildren(grid) {
   const topNeighbor = grid[lastRow - 1][0]
   const rightNeighbor = grid[lastRow][1]
 
-  if (bottomLeftCorner.value[2] !== '-') {
-    if (topNeighbor.value[2] !== '-') {
+  if (!bottomLeftCorner.value[2].includes('*')) {
+    if (!topNeighbor.value[2].includes('*')) {
       bottomLeftCorner.children.push(topNeighbor)
     }
 
-    if (rightNeighbor.value[2] !== '-') {
+    if (!rightNeighbor.value[2].includes('*')) {
       bottomLeftCorner.children.push(rightNeighbor)
     }
   }
@@ -40,12 +40,12 @@ function upperRightCornerChildren(grid) {
   const leftNeighbor = grid[0][lastColumn - 1]
   const bottomNeighbor = grid[1][lastColumn]
 
-  if (upperRightCorner.value[2] !== '-') {
-    if (leftNeighbor.value[2] !== '-') {
+  if (!upperRightCorner.value[2].includes('*')) {
+    if (!leftNeighbor.value[2].includes('*')) {
       upperRightCorner.children.push(leftNeighbor)
     }
 
-    if (bottomNeighbor.value[2] !== '-') {
+    if (!bottomNeighbor.value[2].includes('*')) {
       upperRightCorner.children.push(bottomNeighbor)
     }
   }
@@ -60,12 +60,12 @@ function bottomRightCornerChildren(grid) {
   const leftNeighbor = grid[lastRow][lastColumn - 1]
   const topNeighbor = grid[lastRow - 1][lastColumn]
 
-  if (bottomRightCorner.value[2] !== '-') {
-    if (leftNeighbor.value[2] !== '-') {
+  if (!bottomRightCorner.value[2].includes('*')) {
+    if (!leftNeighbor.value[2].includes('*')) {
       bottomRightCorner.children.push(leftNeighbor)
     }
 
-    if (topNeighbor.value[2] !== '-') {
+    if (!topNeighbor.value[2].includes('*')) {
       bottomRightCorner.children.push(topNeighbor)
     }
   }

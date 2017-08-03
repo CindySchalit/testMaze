@@ -10,7 +10,7 @@ function middleSquareChildren(grid) {
         && cell.value[1] // left column
         && cell.value[0] !== grid.length - 1 // bottom row
         && cell.value[1] !== row.length - 1 // right column
-        && cell.value[2] !== '-'
+        && !cell.value[2].includes('*')
       ) {
         middleSquare.push(cell)
       }
@@ -27,7 +27,7 @@ function middleSquareChildren(grid) {
     const neighbors = [topNeighbor, leftNeighbor, rightNeighbor, bottomNeighbor]
 
     neighbors.forEach(neighbor => {
-      if (neighbor.value[2] !== '-') {
+      if (!neighbor.value[2].includes('*')) {
         cell.children.push(neighbor)
       }
     })

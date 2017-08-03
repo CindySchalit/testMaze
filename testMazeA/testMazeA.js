@@ -9,19 +9,19 @@ class Vertex {
 
 let A = new Vertex([ 0, 0, 'A'])
 let B = new Vertex([ 0, 1, 'B'])
-let C = new Vertex([ 0, 2, '-'])
+let C = new Vertex([ 0, 2, '*'])
 let D = new Vertex([ 0, 3, 'D'])
-let E = new Vertex([ 1, 0, '-'])
+let E = new Vertex([ 1, 0, '*'])
 let F = new Vertex([ 1, 1, 'F'])
 let G = new Vertex([ 1, 2, 'G'])
 let H = new Vertex([ 1, 3, 'H'])
 let I = new Vertex([ 2, 0, 'I'])
 let J = new Vertex([ 2, 1, 'J'])
-let K = new Vertex([ 2, 2, '-'])
+let K = new Vertex([ 2, 2, '*'])
 let L = new Vertex([ 2, 3, 'L'])
 let M = new Vertex([ 3, 0, 'M'])
 let N = new Vertex([ 3, 1, 'N'])
-let O = new Vertex([ 3, 2, '-'])
+let O = new Vertex([ 3, 2, '*'])
 let P = new Vertex([ 3, 3, 'P'])
 
 let vertexList = [

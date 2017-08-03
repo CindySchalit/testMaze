@@ -7,22 +7,22 @@ class Vertex {
   }
 }
 
-let A = new Vertex([ 0, 0, '-'])
-let B = new Vertex([ 0, 1, '-'])
-let C = new Vertex([ 0, 2, '-'])
-let D = new Vertex([ 0, 3, '-'])
-let E = new Vertex([ 1, 0, '-'])
-let F = new Vertex([ 1, 1, '-'])
-let G = new Vertex([ 1, 2, '-'])
-let H = new Vertex([ 1, 3, '-'])
-let I = new Vertex([ 2, 0, '-'])
-let J = new Vertex([ 2, 1, '-'])
-let K = new Vertex([ 2, 2, '-'])
-let L = new Vertex([ 2, 3, '-'])
-let M = new Vertex([ 3, 0, '-'])
-let N = new Vertex([ 3, 1, '-'])
-let O = new Vertex([ 3, 2, '-'])
-let P = new Vertex([ 3, 3, '-'])
+let A = new Vertex([ 0, 0, '*'])
+let B = new Vertex([ 0, 1, '*'])
+let C = new Vertex([ 0, 2, '*'])
+let D = new Vertex([ 0, 3, '*'])
+let E = new Vertex([ 1, 0, '*'])
+let F = new Vertex([ 1, 1, '*'])
+let G = new Vertex([ 1, 2, '*'])
+let H = new Vertex([ 1, 3, '*'])
+let I = new Vertex([ 2, 0, '*'])
+let J = new Vertex([ 2, 1, '*'])
+let K = new Vertex([ 2, 2, '*'])
+let L = new Vertex([ 2, 3, '*'])
+let M = new Vertex([ 3, 0, '*'])
+let N = new Vertex([ 3, 1, '*'])
+let O = new Vertex([ 3, 2, '*'])
+let P = new Vertex([ 3, 3, '*'])
 
 let vertexList = [
   A, // 0

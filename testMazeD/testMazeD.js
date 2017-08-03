@@ -146,7 +146,7 @@ const valuesOnly = (maze) => {
   })
 }
 
-console.log(logGrid(valuesOnly(testMazeD)))
+// console.log(logGrid(valuesOnly(testMazeD)))
 
 module.exports = {
   testMazeD,
