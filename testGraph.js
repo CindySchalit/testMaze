@@ -25,6 +25,7 @@ const bottomRowChildren = require('./topBottomRowsAndLeftRightColumnsChildren').
 const leftColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren').leftColumnChildren
 const rightColumnChildren = require('./topBottomRowsAndLeftRightColumnsChildren').rightColumnChildren
 const middleSquareChildren = require('./middleSquareChildren').middleSquareChildren
+const graphBFS = require('./breadthFirstSearch').graphBFS
 
 // console.log(testGrid.map(row => {
 //   return row.map(cell => cell.value[2])
@@ -53,6 +54,10 @@ rightColumnChildren(testGrid)
 
 middleSquareChildren(testGrid)
 
-console.log(F.children, ' * * * B, G & J')
-console.log(G.children, ' * * * F & H')
-console.log(J.children, ' * * * F, I & N')
+// console.log(F.children, ' * * * B, G & J')
+// console.log(G.children, ' * * * F & H')
+// console.log(J.children, ' * * * F, I & N')
+
+// console.log(graphBFS(testGrid, M, H), true)
+// console.log(graphBFS(testGrid, A, C), false)
+console.log(graphBFS(testGrid, A, D), true)
